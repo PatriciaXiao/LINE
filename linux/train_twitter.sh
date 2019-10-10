@@ -15,5 +15,5 @@ python3 preprocess_twitter.py twitter-links.txt net_twitter.txt
 
 cd evaluate
 ./run.sh ../twitter_vec_all.txt
-python3 score.py twitter_result.txt
+python3 score.py result.txt
 cd ..
