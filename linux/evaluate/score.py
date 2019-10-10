@@ -17,8 +17,8 @@ for line in fi:
         b = b + 1
 fi.close()
 
-macro_f1 = macro_f1 / a
-micro_f1 = micro_f1 / b
+macro_f1 = macro_f1 / a if a else 0
+micro_f1 = micro_f1 / b if b else 0
 
 print("Macro-F1: " + str(macro_f1))
 print("Micro-F1: " + str(micro_f1))
