@@ -5,7 +5,7 @@ g++ -lm -pthread -Ofast -march=native -Wall -funroll-loops -ffast-math -Wno-unus
 g++ -lm -pthread -Ofast -march=native -Wall -funroll-loops -ffast-math -Wno-unused-result normalize.cpp -o normalize
 g++ -lm -pthread -Ofast -march=native -Wall -funroll-loops -ffast-math -Wno-unused-result concatenate.cpp -o concatenate
 
-python3 preprocess_twitter.py twitter-links.txt net_twitter.txt
+python3 preprocess_youtube.py twitter-links.txt net_twitter.txt
 ./reconstruct -train net_twitter.txt -output net_twitter_dense.txt -depth 2 -threshold 1000
 ./line -train net_twitter_dense.txt -output twitter_vec_1st_wo_norm.txt -binary 1 -size 128 -order 1 -negative 5 -samples 10000 -threads 40
 ./line -train net_twitter_dense.txt -output twitter_vec_2nd_wo_norm.txt -binary 1 -size 128 -order 2 -negative 5 -samples 10000 -threads 40
